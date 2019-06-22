@@ -1,0 +1,219 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+        		<!-- Featured Tags -->
+                {% if site.featured-tags %}{% if page.url != '/tags/' %}
+                <section>
+                    <p><a href="/tags/">FEATURED TAGS</a></p>
+                    <div class="tags">
+        				{% for tag in site.tags %}
+                            {% if tag[1].size > {{site.featured-condition-size}} %}
+                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                    {{ tag[0] }}
+                                </a>
+                            {% endif %}
+        				{% endfor %}
+        			</div>
+                </section>
+                {% endif %}{% endif %}
+
+				<!-- Friends Blog -->
+                {% if site.friends %}
+                <hr class="hidden-sm hidden-xs">
+                <p>FRIENDS</p>
+                <ul class="list-inline">
+                    {% for friend in site.friends %}
+     	     	         <li><a target="_blank" href="{{friend.href}}">{{friend.title}}</a></li>
+          		      {% endfor %}
+            	</ul>
+            	{% endif %}
+            </div>
+
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <!-- kill the Facebook and Weibo -->
+                    <li>
+                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% if site.twitter_username %}
+                    <li>
+                        <a href="https://twitter.com/{{ site.twitter_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    {% if site.github_username %}
+                    <li>
+                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    <!--
+                    {% if site.douban_username %}
+                    <li>
+                        <a href="http://www.douban.com/people/{{ site.douban_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-douban fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    -->
+
+                    <!--
+                    {% if site.facebook_username %}
+                    <li>
+                        <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    -->
+
+                    {% if site.zhihu_username %}
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    <!--
+                    {% if site.weibo_username %}
+                    <li>
+                        <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    -->
+
+                </ul>
+                <p class="copyright text-muted">
+                &copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. ❖ Powered by Jekyll. ❖ Forked from CnFeat and Hux.
+                </p>
+                <div style="text-align:center">
+                    <div id="google_translate_element"></div>
+                </div>
+            </div>
+			<!--div id="countdown" class="hidden-xs">
+				<font color="red">警告!</font>距NOIP2018还有
+				<p id="CountMsg" class="HotDate">
+				<span id="t_d">00天</span>
+				<span id="t_h">00时</span>
+				<span id="t_m">00分</span>
+				<span id="t_s">00秒</span>
+				</p>
+			</div-->
+        </div>
+    </div>
+</footer>
+
+<!--style>
+#countdown{
+	position:fixed;
+	font-size:25;
+	top:78%;
+	left:80%;
+	width:20%;
+	height:25px;
+	line-height:25px;
+}
+</style-->
+
+<!-- toc -->
+<script src="{{ "/js/jekyll-table-of-contents.js " | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#toc').toc();
+}); </script>
+
+<!-- smooth-scroll -->
+<script src="{{ "/js/smooth-scroll.min.js " | prepend: site.baseurl }}"></script>
+<script type="text/javascript">
+    var scroll = new SmoothScroll('a[href*="#"]',{
+        offset: 200,
+        speed: 500,
+        autoCoefficent: 10
+    });
+</script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/muzhou-blog.js " | prepend: site.baseurl }}"></script>
+
+<!-- time down >
+<script type="text/javascript">
+function getRTime(){
+var EndTime= new Date('2018/11/11 8:30:00'); //截止时间
+var NowTime = new Date();
+var t =EndTime.getTime() - NowTime.getTime();
+var d=Math.floor(t/1000/60/60/24);
+var h=Math.floor(t/1000/60/60%24);
+var m=Math.floor(t/1000/60%60);
+var s=Math.floor(t/1000%60);
+
+document.getElementById("t_d").innerHTML = d + "天";
+document.getElementById("t_h").innerHTML = h + "时";
+document.getElementById("t_m").innerHTML = m + "分";
+document.getElementById("t_s").innerHTML = s + "秒";
+}
+setInterval(getRTime,1000);
+</script-->
+
+{% if site.duoshuo_username %}
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+	var duoshuoQuery = {short_name:"{{ site.duoshuo_username }}"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'https:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+<!--script type="text/javascript" color="105,105,105" pointColor="54,54,54" opacity='0.7' zIndex="-2" count="99" src="{{ "/js/canvas-nest.min.js " | prepend: site.baseurl }}"></script-->
+
+<!-- google translate -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'zh-CN', layout: 		google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
+}
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true}, 'google_translate_element');
+}
+</script>
+<script src="{{ "/js/google-translate.js " | prepend: site.baseurl }}"></script>

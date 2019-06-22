@@ -1,0 +1,48 @@
+<head>
+
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords"  content="{{ site.keyword }}">
+
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+	<!-- Loading -->
+	<link rel="stylesheet" href="{{ "/css/loading.css" | prepend: site.baseurl }}">
+
+    <!-- Icons -->
+	<!--link rel="shortcut icon" href="img/favicon.ico"-->
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href=""css/fonts.googleapis.com.css rel='stylesheet' type='text/css'>
+
+	<!-- muzhou-blog -->
+	<link rel="stylesheet" href="{{ "/css/muzhou-blog.css" | prepend: site.baseurl }}">
+
+	<!-- jQuery.js -->
+	<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE]>
+		<script src="{{ "/js/html5shiv-printshiv.min.js " | prepend: site.baseurl }}"></script>
+		<script src="{{ "/js/selectivizr-min.js " | prepend: site.baseurl }}"></script>
+		<script type="text/javascript">
+			alert("请不要在公众场合使用IE");
+		</script>
+    <![endif]-->
+
+</head>

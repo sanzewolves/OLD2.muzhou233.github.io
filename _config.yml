@@ -1,0 +1,178 @@
+# Site settings
+title: MuZhou Blog
+header-img: "img/green.jpg"
+tagline: "cn"
+description: "喜欢linux 喜欢各种技术"
+keyword: "MuZhou, MuZhou Blog, OIer, noip"
+baseurl: ""
+url: "https://muzhou.tech"
+
+# About/contact
+owner:
+  name: "MuZhou"
+  email: MuZhou233@outlook.com
+  bio: ""
+
+# Data
+gavatar:
+favicon: favicon.ico
+
+douban_username:
+twitter_username:
+github_username: muzhou233
+facebook_username:
+weibo_username:
+zhihu_username: muzhou233
+
+# Build settings
+# use Github Flavored Markdown !important
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+highlighter: rouge
+permalink: pretty
+paginate: 12
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai
+
+# Defaults for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "MuZhou"
+      header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in footer navigation
+
+# Gems
+plugins: [jekyll-paginate]
+
+# Code Libraries
+
+code-lib-url: https://github.com/MuZhou233/muzhou233.github.io/blob/master/code/
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 3              # A tag will be featured if the size of it is more than this condition value
+
+# Friends
+friends: [
+    {
+        title: "Janis",
+        href: "http://janiszzz.github.io"
+    },{
+        title: "Coolkid",
+        href: "http://blog.csdn.net/coolkid_cwm/"
+    },{
+        title: "zzx",
+        href: "http://blog.csdn.net/qq_34004420/"
+    },{
+        title: "cl",
+        href: "http://blog.csdn.net/c_lyr/"
+    },{
+        title: "Tabing",
+        href: "http://blog.gyx1.cn"
+    },{
+        title: "CerteKim",
+        href: "http://certekim.cn"
+    },{
+        title: "Hoohan",
+        href: "http://hoohan.cn"
+    }
+]
+
+# Achievements
+achievements: [
+    {
+        name: "这本轻小说真厉害",
+        detail: "终于买了一本正版轻小说",
+        time: "2019.6.20",
+        img: "/img/ach/ach_6.jpg"
+    },{
+        name: "来吃水果",
+        detail: "首次使用 FLstudio 制作作品",
+        time: "2019.5.28",
+        img: "/img/ach/ach_7.png",
+        url: "/video/ach7"
+    },{
+        name: "我们的世界岌岌可危",
+        detail: "Ingress ENL，ID：MuZhou233",
+        time: "2019.3.3",
+        img: "/img/ach/ach_5.jpg",
+        url: "https://www.ingress.com"
+    },{
+        name: "即将步入21世纪",
+        detail: "B站总播放达到1999次",
+        time: "2018.9.21",
+        img: "/img/ach/ach_4.png",
+        url: "https://space.bilibili.com/170901490/"
+    },{
+        name: "这个盒蛋太小了！",
+        detail: "首次购买周边手办",
+        time: "2018.8.13",
+        img: "/img/ach/ach_2.jpg",
+        url: "/video/ach2"
+    },{
+        name: "hanser hanser dance",
+        detail: "首次制作MMD",
+        time: "2018.7.20",
+        img: "/img/ach/ach_1.jpg",
+        url: "/video/ach1"
+    },{
+        name: "编不下去了",
+        detail: "首次写出万字论文",
+        time: "2017.11.6",
+        img: "/img/ach/ach_3.jpg",
+        url: "/dissertation/2018/08/14/dissertation"
+    },{
+        name: "万恶之源",
+        detail: "成功搭建起博客",
+        time: "2016.10.17",
+        img: "/img/ach/ach_0.jpg",
+        url: "/about"
+#    },{
+#        name: "",
+#        detail: "",
+#        time: "",
+#        img: "",
+#        url: ""
+    }
+]
+
+#TagDetails
+tagDetails: [
+    {
+        name: "简明教程",
+        content: "各类教程的浓缩笔记"
+    },{
+        name: "六月下",
+        content: "高考后策划的系列博文"
+    },{
+        name: "持续记录",
+        content: "内容会持续更新的博文"
+    },{
+        name: "OI",
+        content: "曾经作为一个OIer所作的记录"
+    },{
+        name: "转载",
+        content: "犯懒的结晶"
+#    },{
+#        name: "",
+#        content: ""
+    }
+]

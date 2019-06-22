@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+{% include head.html %}
+
+<body data-spy="scroll" data-offset="300">
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div id="object"></div>
+			</div>
+		</div>
+	</div>
+	<div class="indicator"></div>
+	
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+	<!-- canvas-nest -->
+	<!--script type="text/javascript" opacity="0.7" count="100" src="{{ "/js/canvas-nest.min.js " | prepend: site.baseurl }}"></script-->
+</body>
+
+<script>
+setTimeout(function () {
+	$("#loading").fadeOut("slow");
+	}, 500
+);
+</script>
+</html>

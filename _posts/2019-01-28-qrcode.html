@@ -1,0 +1,34 @@
+---
+layout: post
+title: 二维码生成器
+date: 2019-01-28
+categories: blog
+tags: [blog]
+description:
+question: 编辑中
+password: none
+hide: true
+---
+
+<div id="customizeQrcode"></div>
+<form class="form-inline">
+  <div class="form-group">
+    <p style="color:#e03636">内容已锁定</p>
+    <p class="post-pass-question">{{ page.question }}</p>
+    <label for="post-pass-input" class="sr-only">Password</label>
+    <input type="password" id="post-pass-input" class="form-control post-pass-input" placeholder="password"></input>
+    <button class="btn post-pass-submit">验证</button>
+  </div>
+</form>
+<script>
+//jQuery('#qrcode').qrcode({width: 128,height: 128,text: "{{ site.url }}{{ page.url }}"});
+
+new QArt({
+  value: '{{ site.url }}{{ page.url }}',
+  imagePath: '/img/mz.jpg',
+  filter: 'color',
+  background: '#208c5b',
+  version: 5,
+  size: 128
+}).make(document.getElementById('customizeQrcode'));
+</script>

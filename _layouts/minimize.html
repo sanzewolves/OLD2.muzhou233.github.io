@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+{% include head.html %}
+
+<body data-spy="scroll" data-offset="300">
+	<div id="loading">
+		<div id="loading-center">
+			<div id="loading-center-absolute">
+				<div id="object"></div>
+			</div>
+		</div>
+	</div>
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
+    }
+    #header0{z-index:2;}
+</style>
+<header id="header0" class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <span class="meta">本文已设置为以简化视图模式展示</span>
+                </div>
+            </div>
+            <div id="qrcode-block" class="hidden-xs hidden-sm">
+            	<div id="qrcode"></div>
+            	<p style="text-align:right;color:white">手机阅读</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script src="{{ "/js/qart.min.js " | prepend: site.baseurl }}"></script>
+<script>
+//jQuery('#qrcode').qrcode({width: 128,height: 128,text: "{{ site.url }}{{ page.url }}"});
+new QArt({
+  value: '{{ site.url }}{{ page.url }}',
+  imagePath: '/img/mz.jpg',
+  filter: 'color',
+  background: '#208c5b',
+  version: 5,
+  size: 128
+}).make(document.getElementById('qrcode'));
+</script>
+<style>
+#qrcode-block{
+	position: relative;
+	left: 1000px;
+	top: -300px;
+	height: 128px;
+	width: 128px;
+}
+</style>
+
+<!-- Post Content -->
+<article>
+<div id="maintext" class="col-md-9">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+              <div class="post-content" {% if page.question %} style="display:none" {% endif %}>
+                {{ content }}
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-md-3 scrollspy" role="navigation">
+        <nav id="toc" class="nav hidden-xs hidden-sm affix" data-spy="affix" data-offset-top="380" data-toggle="toc">
+            <ul class="toc"></ul>
+        </ul><!-- end of main navigation -->
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<script>
+/* async load function */
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+/* anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ */
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'right',
+          //icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading');
+    })
+    function count(){
+        if(typeof i == "undefined")i = 1;
+        return "head"+i++;
+    }
+    $(":header").attr("id",count);
+/* Highlight.js */
+    async("https://cdn.bootcss.com/highlight.js/9.7.0/highlight.min.js",function(){
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+</body>
+
+<script>
+setTimeout(function () {
+	$("#loading").fadeOut("slow");
+	}, 500
+);
+</script>
+</html>
