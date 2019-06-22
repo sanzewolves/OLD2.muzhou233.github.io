@@ -162,11 +162,6 @@ body{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22), 0 7px 28px rgba(0, 0, 0, 0.25);
   background: white;
 }
-img:hover {
-	transition: all 0.5s ease 0s;
-	-webkit-filter: blur(2px); /* Chrome, Safari, Opera */
-	filter: blur(2px);
-}
 img,
 pre{
 	transition: all 0.5s ease 0s;

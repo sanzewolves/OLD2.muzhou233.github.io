@@ -29,7 +29,7 @@ show: true
       <div class="achievement-time">{{achievement.time}}</div>
       <img src="{{achievement.img}}" alt class="achievement-img img-responsive">
       <div class="achievement-detail">{{achievement.detail}}</div>
-      {% if achievement.url %}<a class="achievement-link" target="_blank" href="{{achievement.url}}">更多</a>{% endif %}
+      {% if achievement.url %}<a class="achievement-link" target="_blank" href="{{achievement.url}}">{% if achievement.urlName %}{{ achievement.urlName }}{% else %}更多{% endif %}</a>{% endif %}
     </div>
     </div>
     {% endfor %}{% endif %}
