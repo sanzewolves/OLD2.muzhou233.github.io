@@ -3,7 +3,7 @@ $(document).ready(function () {
     var jumpurl = $(this).attr('href');
     if (typeof jumpurl != 'undefined' && jumpurl[0] != '#') {
       jumpevent.preventDefault();
-      var reg = RegExp(/^https:\/\/muzhou.tech.+/);
+      var reg = RegExp(/^https://muzhou.tech/);
       if(jumpurl.match(reg)){
         jumpevent.preventDefault();
         $('#loading').fadeIn('fast');
@@ -20,7 +20,7 @@ $(document).ready(function () {
     var jumpurl = $(this).attr('href');
     if (typeof jumpurl != 'undefined' && jumpurl[0] != '#') {
       jumpevent.preventDefault();
-      var reg = RegExp(/^https:\/\/muzhou.tech.+/);
+      var reg = RegExp(/^https://muzhou.tech/);
       if(jumpurl.match(reg)){
         jumpevent.preventDefault();
         $('#loading').fadeIn('fast');
