@@ -3,9 +3,9 @@ $(document).ready(function () {
     var jumpurl = $(this).attr('href');
     if (typeof jumpurl != 'undefined' && jumpurl[0] != '#') {
       jumpevent.preventDefault();
-      var reg = RegExp(/^https://muzhou.tech/);
-      if(jumpurl.match(reg)){
-        jumpevent.preventDefault();
+      var reg = RegExp('^https://muzhou.tech');
+      var reg2 = RegExp('^/[^/]');
+      if(jumpurl.match(reg) || jumpurl.match(reg2)){
         $('#loading').fadeIn('fast');
         window.setTimeout(function () {
           window.location.href = jumpurl,
@@ -20,9 +20,9 @@ $(document).ready(function () {
     var jumpurl = $(this).attr('href');
     if (typeof jumpurl != 'undefined' && jumpurl[0] != '#') {
       jumpevent.preventDefault();
-      var reg = RegExp(/^https://muzhou.tech/);
-      if(jumpurl.match(reg)){
-        jumpevent.preventDefault();
+      var reg = RegExp('^https://muzhou.tech');
+      var reg2 = RegExp('^/[^/]');
+      if(jumpurl.match(reg) || jumpurl.match(reg2)){
         $('#loading').fadeIn('fast');
         window.setTimeout(function () {
           window.location.href = jumpurl,
@@ -80,3 +80,56 @@ function imgShow(outerdiv, innerdiv, bigimg, _this){
       $('body').css("overflow","unset");//恢复滚动
   });  
 }
+
+$(document).ready(function(){
+    
+  var getMax = function(){
+      return $(document).height() - $(window).height();
+  }
+  
+  var getValue = function(){
+      return $(window).scrollTop();
+  }
+  
+  if('max' in document.createElement('progress')){
+      // Browser supports progress element
+      var progressBar = $('progress');
+      
+      // Set the Max attr for the first time
+      progressBar.attr({ max: getMax() });
+
+      $(document).on('scroll', function(){
+          // On scroll only Value attr needs to be calculated
+          progressBar.attr({ value: getValue() });
+      });
+    
+      $(window).resize(function(){
+          // On resize, both Max/Value attr needs to be calculated
+          progressBar.attr({ max: getMax(), value: getValue() });
+      });   
+  }
+  else {
+      var progressBar = $('.progress-bar'), 
+          max = getMax(), 
+          value, width;
+      
+      var getWidth = function(){
+          // Calculate width in percentage
+          value = getValue();            
+          width = (value/max) * 100;
+          width = width + '%';
+          return width;
+      }
+      
+      var setWidth = function(){
+          progressBar.css({ width: getWidth() });
+      }
+      
+      $(document).on('scroll', setWidth);
+      $(window).on('resize', function(){
+          // Need to reset the Max attr
+          max = getMax();
+          setWidth();
+      });
+  }
+});
