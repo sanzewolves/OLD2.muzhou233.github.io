@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 前路渺茫，我只能前行  ————一个不安分的高三党的思考
+title: 前路渺茫，我只能前行
+subtitle: 一个不安分的高三党的思考
 date: 2017-9-15
 categories: composition
 tags: [composition]
