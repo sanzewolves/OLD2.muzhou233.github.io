@@ -1,5 +1,1 @@
-<a href="https://travis-ci.com/MuZhou233/muzhou233.github.io">![](https://travis-ci.com/MuZhou233/muzhou233.github.io.svg?branch=master)</a>
-![](https://img.shields.io/badge/GirlFriend-NotFound-Red.svg)
-![](https://img.shields.io/badge/lisense-MIT-Black.svg)
-
-本仓库已于2019.6.22重建，历史记录请查阅[https://github.com/MuZhou233/OLD.muzhou233.github.io](https://github.com/MuZhou233/OLD.muzhou233.github.io)
+这里是我的博客模板，如果你想使用我的博客主题的话就从这里开始吧
