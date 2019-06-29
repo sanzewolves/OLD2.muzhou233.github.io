@@ -63,7 +63,7 @@ new QArt({
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
               <blockquote>
-                <p>{% if page.copyright %}{{ page.copyright }}{% else %}本页面内容允许转载使用，转载文章内容请注明原作者及出处{% endif %}</p>
+                <p>{% if page.copyright %}{{ page.copyright }}{% else %}本页面内容授权规范转载，转载请注明出处{% endif %}</p>
                 <p>页尾评论区需使用 Github 账号登陆使用，评论区内容公开存储于本项目 issue 中</p>
                 {% if page.timedepend %}
                 <p style="color:#e03636">本文内容具有时效性，请注意本文的最后一次修改时间为 {{ page.lastDate | date: "%B %-d, %Y" }}</p>
