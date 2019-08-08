@@ -137,6 +137,16 @@ table > tbody > tr > td{
   visibility: hidden;
 }
 
+.post-content p{
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.post-content br{
+  display: inline;
+  line-height: 2;
+}
+
 .post-content li{
   margin-left:20px;
 }
