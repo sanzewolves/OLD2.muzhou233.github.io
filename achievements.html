@@ -4,25 +4,12 @@ title: 成就室
 show: true
 ---
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <hr class="small">
-                    <span class="subheading">{{ page.description }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+{% include header.html %}
 
 <!-- Main Content -->
 <div class="container">
 	<div class="row achievement-list">
-    {% if site.achievements %}{% for achievement in site.achievements %}
+    {% if site.data.achievements.achievements %}{% for achievement in site.data.achievements.achievements %}
     <div class="achievement-item">
     <div class="achievement-box">
       <div class="achievement-name">{{achievement.name}}</div>

@@ -1,0 +1,25 @@
+# Friends
+friends: [
+    {
+        title: "Janis",
+        href: "http://janiszzz.github.io"
+    },{
+        title: "Coolkid",
+        href: "http://blog.csdn.net/coolkid_cwm/"
+    },{
+        title: "zzx",
+        href: "http://blog.csdn.net/qq_34004420/"
+    },{
+        title: "cl",
+        href: "http://blog.csdn.net/c_lyr/"
+    },{
+        title: "Tabing",
+        href: "http://blog.gyx1.cn"
+    },{
+        title: "CerteKim",
+        href: "http://certekim.cn"
+    },{
+        title: "Hoohan",
+        href: "http://hoohan.cn"
+    }
+]

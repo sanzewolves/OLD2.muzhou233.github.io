@@ -1,0 +1,61 @@
+# Achievements
+achievements: [
+    {
+        name: "这本轻小说真厉害",
+        detail: "终于买了一本正版轻小说",
+        time: "2019.6.20",
+        img: "/img/ach/ach_6.jpg"
+    },{
+        name: "来吃水果",
+        detail: "首次使用 FLstudio 制作作品",
+        time: "2019.5.28",
+        img: "/img/ach/ach_7.png",
+        url: "/video/ach7",
+        urlName: "观看视频"
+    },{
+        name: "我们的世界岌岌可危",
+        detail: "Ingress ENL，ID：MuZhou233",
+        time: "2019.3.3",
+        img: "/img/ach/ach_5.jpg",
+        url: "https://www.ingress.com",
+        urlName: "打开首页"
+    },{
+        name: "即将步入21世纪",
+        detail: "B站总播放达到1999次",
+        time: "2018.9.21",
+        img: "/img/ach/ach_4.png",
+        url: "https://space.bilibili.com/170901490/",
+        urlName: "打开首页"
+    },{
+        name: "这个盒蛋太小了！",
+        detail: "首次购买周边手办",
+        time: "2018.8.13",
+        img: "/img/ach/ach_2.jpg",
+        url: "/video/ach2",
+        urlName: "观看视频"
+    },{
+        name: "hanser hanser dance",
+        detail: "首次制作MMD",
+        time: "2018.7.20",
+        img: "/img/ach/ach_1.jpg",
+        url: "/video/ach1",
+        urlName: "观看视频"
+    },{
+        name: "编不下去了",
+        detail: "首次写出万字论文",
+        time: "2017.11.6",
+        img: "/img/ach/ach_3.jpg",
+        url: "/dissertation/2018/08/14/dissertation"
+    },{
+        name: "万恶之源",
+        detail: "成功搭建起博客",
+        time: "2016.10.17",
+        img: "/img/ach/ach_0.jpg",
+#    },{
+#        name: "",
+#        detail: "",
+#        time: "",
+#        img: "",
+#        url: ""
+    }
+]

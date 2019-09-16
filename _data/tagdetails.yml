@@ -1,0 +1,31 @@
+#TagDetails
+tagDetails: [
+    {
+        name: "简明教程",
+        content: "各类教程的浓缩笔记"
+    },{
+        name: "六月下",
+        content: "高考后策划的系列博文"
+    },{
+        name: "持续记录",
+        content: "内容会持续更新的博文"
+    },{
+        name: "OI",
+        content: "曾经作为一个OIer所作的记录"
+    },{
+        name: "转载",
+        content: "犯懒的结晶"
+    },{
+        name: "LINUX",
+        content: "LINUX的一百种叫法"
+    },{
+        name: "composition",
+        content: "有时候是会写点东西的"
+    },{
+        name: "动漫",
+        content: "搞不懂你们二次元为什么这么有趣"
+#    },{
+#        name: "",
+#        content: ""
+    }
+]

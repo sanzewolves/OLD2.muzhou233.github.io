@@ -150,12 +150,12 @@ $(document).ready(function(){
   function init(){
     css(".heart{width: 120px;height: 120px;position: fixed;}\
          .heart::before{content:'';top:-40px;left:-40px;width:140px;height:140px;position:absolute;}\
-         .heart1::before{background: url(/img/button1.svg);background-size:contain;}\
-         .heart2::before{background: url(/img/button2.svg);background-size:contain;}\
-         .heart3::before{background: url(/img/button3.svg);background-size:contain;}\
-         .heart4::before{background: url(/img/button4.svg);background-size:contain;}\
-         .heart5::before{background: url(/img/button5.svg);background-size:contain;}\
-         .heart6::before{background: url(/img/button6.svg);background-size:contain;}\
+         .heart1::before{background: url(/img/button/button1.svg);background-size:contain;}\
+         .heart2::before{background: url(/img/button/button2.svg);background-size:contain;}\
+         .heart3::before{background: url(/img/button/button3.svg);background-size:contain;}\
+         .heart4::before{background: url(/img/button/button4.svg);background-size:contain;}\
+         .heart5::before{background: url(/img/button/button5.svg);background-size:contain;}\
+         .heart6::before{background: url(/img/button/button6.svg);background-size:contain;}\
          ");
     attachEvent();
     gameloop();
@@ -169,6 +169,7 @@ $(document).ready(function(){
       }
       if(hearts[i].alpha <= 0.8)
         hearts[i].y--;
+      else hearts[i].y++;
       hearts[i].scale += 0.02;
       hearts[i].alpha -= 0.02;
       hearts[i].el.style.cssText = "left:"+hearts[i].x+"px;top:"+hearts[i].y+"px;opacity:"+hearts[i].alpha+";transform:scale("+hearts[i].scale+","+hearts[i].scale+");filter:"+hearts[i].color;
