@@ -14,15 +14,15 @@ description:
 
 首先我翻遍了Github上面的源码还是没有找到lazer的node素材，后来在[osu官网](https://osu.ppy.sh)上找到了我想要的那张图片，经过处理显示出来了所有的三角，放在下面
 
-![](/img/button0.svg)
+![](/img/button/button0.svg)
 
 ### 人工切图
 
 仔细观察了lazer的点击效果之后我发现这张素材图片应该是切成小块用比较接近lazer的效果，而这个图片又是SVG格式的，所以连PS都用不上了，直接文本编辑器，因为太懒就只切了六张
 
-|![](/img/button1.svg) | ![](/img/button2.svg) | ![](/img/button3.svg)
+|![](/img/button/button1.svg) | ![](/img/button/button2.svg) | ![](/img/button/button3.svg)
 |---|---|---|
-|![](/img/button4.svg) | ![](/img/button5.svg) | ![](/img/button6.svg)
+|![](/img/button/button4.svg) | ![](/img/button/button5.svg) | ![](/img/button/button6.svg)
 
 ## 实现
 
