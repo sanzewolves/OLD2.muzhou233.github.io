@@ -157,8 +157,23 @@ $(document).ready(function(){
          .heart5::before{background: url(/img/button/button5.svg);background-size:contain;}\
          .heart6::before{background: url(/img/button/button6.svg);background-size:contain;}\
          ");
+    img();
     attachEvent();
     gameloop();
+  }
+  function img() {
+    var imgsrc = [
+      "/img/button/button1.svg",
+      "/img/button/button2.svg",
+      "/img/button/button3.svg",
+      "/img/button/button4.svg",
+      "/img/button/button5.svg",
+      "/img/button/button6.svg",
+    ];
+    for(var i = 0; i < imgsrc.length; i++){
+      var Img = new Image();
+      Img.src = imgsrc[i];
+    }
   }
   function gameloop(){
     for(var i=0;i<hearts.length;i++){

@@ -121,15 +121,6 @@
                     <div id="google_translate_element"></div>
                 </div>
             </div>
-			<!--div id="countdown" class="hidden-xs">
-				<font color="red">警告!</font>距NOIP2018还有
-				<p id="CountMsg" class="HotDate">
-				<span id="t_d">00天</span>
-				<span id="t_h">00时</span>
-				<span id="t_m">00分</span>
-				<span id="t_s">00秒</span>
-				</p>
-			</div-->
         </div>
     </div>
 </footer>
@@ -139,18 +130,6 @@
         <img id="bigimg" style="border:5px solid #fff;" src="" />
     </div>
 </div>
-
-<!--style>
-#countdown{
-	position:fixed;
-	font-size:25;
-	top:78%;
-	left:80%;
-	width:20%;
-	height:25px;
-	line-height:25px;
-}
-</style-->
 
 <!-- toc -->
 <script src="{{ "/js/jekyll-table-of-contents.js " | prepend: site.baseurl }}"></script>
@@ -175,43 +154,6 @@ $(document).ready(function() {
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/muzhou-blog.js " | prepend: site.baseurl }}"></script>
-
-<!-- time down >
-<script type="text/javascript">
-function getRTime(){
-var EndTime= new Date('2018/11/11 8:30:00'); //截止时间
-var NowTime = new Date();
-var t =EndTime.getTime() - NowTime.getTime();
-var d=Math.floor(t/1000/60/60/24);
-var h=Math.floor(t/1000/60/60%24);
-var m=Math.floor(t/1000/60%60);
-var s=Math.floor(t/1000%60);
-
-document.getElementById("t_d").innerHTML = d + "天";
-document.getElementById("t_h").innerHTML = h + "时";
-document.getElementById("t_m").innerHTML = m + "分";
-document.getElementById("t_s").innerHTML = s + "秒";
-}
-setInterval(getRTime,1000);
-</script-->
-
-{% if site.duoshuo_username %}
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-	var duoshuoQuery = {short_name:"{{ site.duoshuo_username }}"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'https:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
-
-<!--script type="text/javascript" color="105,105,105" pointColor="54,54,54" opacity='0.7' zIndex="-2" count="99" src="{{ "/js/canvas-nest.min.js " | prepend: site.baseurl }}"></script-->
 
 <!-- google translate -->
 <script type="text/javascript">

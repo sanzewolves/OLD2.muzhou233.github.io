@@ -36,7 +36,6 @@ layout: default
 
 <script src="{{ "/js/qart.min.js " | prepend: site.baseurl }}"></script>
 <script>
-//jQuery('#qrcode').qrcode({width: 128,height: 128,text: "{{ site.url }}{{ page.url }}"});
 new QArt({
   value: '{{ site.url }}{{ page.url }}',
   imagePath: '/img/mz.jpg',
@@ -119,51 +118,6 @@ new QArt({
                 <h1 class="comment-head">评论区</h1>
 
 				<div id="commentcontainer"></div>
-
-                <!-- Duoshuo Share start
-                <style>
-                    .ds-share{
-                        text-align: right;
-                    }
-
-                    @media only screen and (max-width: 700px) {
-                        .ds-share {
-
-                        }
-                    }
-                </style>
-                <div class="ds-share"
-                    data-thread-key="{{page.id}}" data-title="{{page.title}}"
-                    data-images="{{ site.url }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
-                    data-content="{{ content | strip_html | truncate:80 }} | Microdust:Azeril's blog"
-                    data-url="{{site.url}}{{page.url}}">
-                    <div class="ds-share-inline">
-                      <ul  class="ds-share-icons-16">
-
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                 Duoshuo Share end-->
-
-
-                {% if site.duoshuo_username %}
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="{{page.id}}"
-                        data-title="{{page.title}}"
-                        data-url="{{site.url}}{{site.baseurl}}{{page.url}}" >
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                {% endif %}
             </div>
         </div>
     </div>
@@ -230,7 +184,3 @@ gitment.render('commentcontainer')
         }
     }
 </style>
-
-<!-- Highlight.css -->
-<!--link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"-->
-<!--link href="http://cdn.bootcss.com/highlight.js/9.7.0/styles/googlecode.min.css" rel="stylesheet"-->

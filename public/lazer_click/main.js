@@ -14,15 +14,30 @@
   function init(){
     css(".heart{width: 120px;height: 120px;position: fixed;}\
          .heart::before{content:'';top:-40px;left:-40px;width:140px;height:140px;position:absolute;}\
-         .heart1::before{background: url(https://raw.githubusercontent.com/MuZhou233/muzhou233.github.io/master/public/lazer_click/button1.svg);background-size:contain;}\
-         .heart2::before{background: url(https://raw.githubusercontent.com/MuZhou233/muzhou233.github.io/master/public/lazer_click/button2.svg);background-size:contain;}\
-         .heart3::before{background: url(https://raw.githubusercontent.com/MuZhou233/muzhou233.github.io/master/public/lazer_click/button3.svg);background-size:contain;}\
-         .heart4::before{background: url(https://raw.githubusercontent.com/MuZhou233/muzhou233.github.io/master/public/lazer_click/button4.svg);background-size:contain;}\
-         .heart5::before{background: url(https://raw.githubusercontent.com/MuZhou233/muzhou233.github.io/master/public/lazer_click/button5.svg);background-size:contain;}\
-         .heart6::before{background: url(https://raw.githubusercontent.com/MuZhou233/muzhou233.github.io/master/public/lazer_click/button6.svg);background-size:contain;}\
+         .heart1::before{background: url(https://muzhou.tech/public/lazer_click/button1.svg);background-size:contain;}\
+         .heart2::before{background: url(https://muzhou.tech/public/lazer_click/button2.svg);background-size:contain;}\
+         .heart3::before{background: url(https://muzhou.tech/public/lazer_click/button3.svg);background-size:contain;}\
+         .heart4::before{background: url(https://muzhou.tech/public/lazer_click/button4.svg);background-size:contain;}\
+         .heart5::before{background: url(https://muzhou.tech/public/lazer_click/button5.svg);background-size:contain;}\
+         .heart6::before{background: url(https://muzhou.tech/public/lazer_click/button6.svg);background-size:contain;}\
          ");
+    img();
     attachEvent();
     gameloop();
+  }
+  function img() {
+    var imgsrc = [
+      "https://muzhou.tech/public/lazer_click/button1.svg",
+      "https://muzhou.tech/public/lazer_click/button2.svg",
+      "https://muzhou.tech/public/lazer_click/button3.svg",
+      "https://muzhou.tech/public/lazer_click/button4.svg",
+      "https://muzhou.tech/public/lazer_click/button5.svg",
+      "https://muzhou.tech/public/lazer_click/button6.svg",
+    ];
+    for(var i = 0; i < imgsrc.length; i++){
+      var Img = new Image();
+      Img.src = imgsrc[i];
+    }
   }
   function gameloop(){
     for(var i=0;i<hearts.length;i++){
