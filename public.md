@@ -1,0 +1,58 @@
+---
+layout: page
+title: "共享库"
+header-img: "img/twitter.jpg"
+description: "这里存放着我制作的一些‘可能开箱即用’的作品"
+show: true
+---
+
+<div class="readme"></div>
+
+---
+
+<div class="readmes"></div>
+
+<script src="{{ "/js/marked.min.js " | prepend: site.baseurl }}"></script>
+
+{% assign files = site.static_files | where: "public", true %}
+<script>
+var readmes = "\
+# 共享库列表\n"
+{% for file in files %}{% if file.name == "README.md" %}
++ "- [" + "\
+{{ file.path }}\
+".slice(8,-10) + "]({{ page.url }}?" + "\
+{{ file.path }}\
+".slice(8,-10) + ")\n"
+{% endif %}{% endfor %}
+$('.readmes').html(marked(readmes));
+$('.readmes a').each(function(i, e){
+    $.ajax({
+        url: "{{ page.url }}" + e.innerHTML + "/README.md",
+        type: "get",
+        dataType: "text",
+        async: true,
+        success: function(data){
+            var newname = data.slice(2, data.indexOf('\n'));
+            if(newname.length > 0)
+                e.innerHTML = newname;
+        }
+    })
+});
+</script>
+
+<script>
+function loadREADME(name){
+    $.ajax({
+        url: "{{ page.url }}" + name + "/README.md",
+        type: "get",
+        dataType: "text",
+        async: true,
+        success: function(data){
+            $('.readme').html(marked(data));
+        }
+    })
+}
+if(window.location.search != undefined && window.location.search != "")
+    loadREADME(window.location.search.slice(1));
+</script>

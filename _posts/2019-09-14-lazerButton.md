@@ -10,6 +10,8 @@ description:
 
 最近突发奇想在博客上增加了一个模仿osu!lazer的node点击效果，由于技术不精，花费了一天的时间。
 
+**[想在你的网页上开启这个效果的话就点这里吧](/public/?lazer_click)**
+
 ## 素材
 
 首先我翻遍了Github上面的源码还是没有找到lazer的node素材，后来在[osu官网](https://osu.ppy.sh)上找到了我想要的那张图片，经过处理显示出来了所有的三角，放在下面

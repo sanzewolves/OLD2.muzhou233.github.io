@@ -78,14 +78,17 @@ timezone: Asia/Shanghai
 
 # Defaults for posts
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
       author: "MuZhou"
       header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
+  - scope:
+      path: "public"
+    values:
+        public: true
 
 # Gems
 plugins: [jekyll-paginate]
