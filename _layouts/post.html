@@ -26,20 +26,22 @@ layout: default
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
+            {% if site.favicon %}
             <div id="qrcode-block" class="hidden-xs hidden-sm">
             	<div id="qrcode"></div>
             	<p style="text-align:right;color:white">手机阅读</p>
             </div>
+            {% endif %}
         </div>
     </div>
 </header>
 
+{% if site.favicon %}
 <script src="{{ "/js/qart.min.js " | prepend: site.baseurl }}"></script>
 <script>
-//jQuery('#qrcode').qrcode({width: 128,height: 128,text: "{{ site.url }}{{ page.url }}"});
 new QArt({
   value: '{{ site.url }}{{ page.url }}',
-  imagePath: '/img/mz.jpg',
+  imagePath: '{{ site.favicon }}',
   filter: 'color',
   background: '#208c5b',
   version: 5,
@@ -55,6 +57,7 @@ new QArt({
 	width: 128px;
 }
 </style>
+{% endif %}
 
 <!-- Post Content -->
 <article>
@@ -63,7 +66,7 @@ new QArt({
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
               <blockquote>
-                <p>{% if page.copyright %}{{ page.copyright }}{% else %}本页面内容允许转载使用，转载文章内容请注明原作者及出处{% endif %}</p>
+                <p>{% if page.copyright %}{{ page.copyright }}{% else %}本页面内容授权规范转载，转载请注明出处{% endif %}</p>
                 <p>页尾评论区需使用 Github 账号登陆使用，评论区内容公开存储于本项目 issue 中</p>
                 {% if page.timedepend %}
                 <p style="color:#e03636">本文内容具有时效性，请注意本文的最后一次修改时间为 {{ page.lastDate | date: "%B %-d, %Y" }}</p>
@@ -119,51 +122,6 @@ new QArt({
                 <h1 class="comment-head">评论区</h1>
 
 				<div id="commentcontainer"></div>
-
-                <!-- Duoshuo Share start
-                <style>
-                    .ds-share{
-                        text-align: right;
-                    }
-
-                    @media only screen and (max-width: 700px) {
-                        .ds-share {
-
-                        }
-                    }
-                </style>
-                <div class="ds-share"
-                    data-thread-key="{{page.id}}" data-title="{{page.title}}"
-                    data-images="{{ site.url }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}"
-                    data-content="{{ content | strip_html | truncate:80 }} | Microdust:Azeril's blog"
-                    data-url="{{site.url}}{{page.url}}">
-                    <div class="ds-share-inline">
-                      <ul  class="ds-share-icons-16">
-
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                 Duoshuo Share end-->
-
-
-                {% if site.duoshuo_username %}
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="{{page.id}}"
-                        data-title="{{page.title}}"
-                        data-url="{{site.url}}{{site.baseurl}}{{page.url}}" >
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                {% endif %}
             </div>
         </div>
     </div>
@@ -171,7 +129,7 @@ new QArt({
     <div class="col-md-3 scrollspy" role="navigation">
         <nav id="toc" class="nav hidden-xs hidden-sm affix" data-spy="affix" data-offset-top="380" data-toggle="toc">
             <ul class="toc"></ul>
-        </ul><!-- end of main navigation -->
+        </nav><!-- end of main navigation -->
     </div>
 </article>
 
@@ -183,8 +141,8 @@ var gitment = new Gitment({
   owner: 'MuZhou233',
   repo: 'muzhou233.github.io',
   oauth: {
-    client_id: '497be462d2fb3ee352ff',
-    client_secret: 'c0013ee9f11e194af8959d8f2a0984234683d849',
+    client_id: '',
+    client_secret: '',
   },
 })
 gitment.render('commentcontainer')
@@ -230,7 +188,3 @@ gitment.render('commentcontainer')
         }
     }
 </style>
-
-<!-- Highlight.css -->
-<!--link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"-->
-<!--link href="http://cdn.bootcss.com/highlight.js/9.7.0/styles/googlecode.min.css" rel="stylesheet"-->

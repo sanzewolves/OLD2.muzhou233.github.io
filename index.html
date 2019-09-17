@@ -22,21 +22,6 @@ description: ""
 }
 </style>
 
-<!-- toppost -->
-<div id="post-list" class="top-post">
-<div id="post-list-in" class="post-preview">
-    <a href="/about/">
-        <h2 id="top-post-title" class="post-title">
-            [TOP]博主有话说
-        </h2>
-        <div id="top-post-content" class="post-content-preview">
-            欢迎围观
-        </div>
-    </a>
-</div>
-</div>
-<hr>
-
 {% for post in paginator.posts %}{% if post.hide %}{% else %}
 <div id="post-list">
 <div id="post-list-in" class="post-preview">

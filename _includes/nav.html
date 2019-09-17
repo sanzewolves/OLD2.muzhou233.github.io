@@ -14,7 +14,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <iframe width="150" height="52" src="//music.163.com/outchain/player?type=2&amp;id={% if page.musicID %}{{ page.musicID }}{% else %}460839654{% endif %}&amp;auto=0&amp;height=32" border="0" frameborder="no" marginwidth="0" marginheight="0" style="margin-top: 3px; float: right;"></iframe>
+            <iframe width="150" height="52" src="//music.163.com/outchain/player?type=2&amp;id={% if page.musicID %}{{ page.musicID }}{% endif %}&amp;auto=0&amp;height=32" border="0" frameborder="no" marginwidth="0" marginheight="0" style="margin-top: 3px; float: right;"></iframe>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="{{ site.baseurl }}/">主页</a>
@@ -30,3 +30,8 @@
     </div>
     <!-- /.container -->
 </nav>
+<progress value="0" id="progressBar">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+</progress>
