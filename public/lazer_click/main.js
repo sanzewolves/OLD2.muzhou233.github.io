@@ -12,14 +12,14 @@
   })();
   init();
   function init(){
-    css(".heart{width: 120px;height: 120px;position: fixed;}\
-         .heart::before{content:'';top:-40px;left:-40px;width:140px;height:140px;position:absolute;}\
-         .heart1::before{background: url(https://muzhou.tech/public/lazer_click/button1.svg);background-size:contain;}\
-         .heart2::before{background: url(https://muzhou.tech/public/lazer_click/button2.svg);background-size:contain;}\
-         .heart3::before{background: url(https://muzhou.tech/public/lazer_click/button3.svg);background-size:contain;}\
-         .heart4::before{background: url(https://muzhou.tech/public/lazer_click/button4.svg);background-size:contain;}\
-         .heart5::before{background: url(https://muzhou.tech/public/lazer_click/button5.svg);background-size:contain;}\
-         .heart6::before{background: url(https://muzhou.tech/public/lazer_click/button6.svg);background-size:contain;}\
+    css(".lazer-click{width: 120px;height: 120px;position: fixed;pointer-events: none;}\
+         .lazer-click::before{content:'';top:-40px;left:-40px;width:140px;height:140px;position:absolute;}\
+         .lazer-click1::before{background: url(https://muzhou.tech/public/lazer_click/button1.svg);background-size:contain;}\
+         .lazer-click2::before{background: url(https://muzhou.tech/public/lazer_click/button2.svg);background-size:contain;}\
+         .lazer-click3::before{background: url(https://muzhou.tech/public/lazer_click/button3.svg);background-size:contain;}\
+         .lazer-click4::before{background: url(https://muzhou.tech/public/lazer_click/button4.svg);background-size:contain;}\
+         .lazer-click5::before{background: url(https://muzhou.tech/public/lazer_click/button5.svg);background-size:contain;}\
+         .lazer-click6::before{background: url(https://muzhou.tech/public/lazer_click/button6.svg);background-size:contain;}\
          ");
     img();
     attachEvent();
@@ -64,7 +64,7 @@
   }
   function createHeart(event){
     var d = document.createElement("div");
-    d.className = "heart heart"+(~~(Math.random()*6+1));
+    d.className = "lazer-click lazer-click"+(~~(Math.random()*6+1));
     hearts.push({
       el : d,
       x : event.clientX - 30,
