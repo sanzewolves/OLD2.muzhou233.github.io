@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<hr>query : <strong>select username from huha_sql where passwd=('') and username='Admin'</strong><hr><br><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php&nbsp;
+<br />&nbsp;&nbsp;</span><span style="color: #007700">include&nbsp;</span><span style="color: #DD0000">"./config.php"</span><span style="color: #007700">;&nbsp;
+<br />&nbsp;&nbsp;</span><span style="color: #0000BB">$db&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">login_chk</span><span style="color: #007700">();&nbsp;
+<br />&nbsp;&nbsp;if(</span><span style="color: #0000BB">preg_match</span><span style="color: #007700">(</span><span style="color: #DD0000">'/_|\.|\(\)|#|-/i'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">[</span><span style="color: #DD0000">'pw'</span><span style="color: #007700">]))&nbsp;exit(</span><span style="color: #DD0000">"No&nbsp;Hack&nbsp;~_~"</span><span style="color: #007700">);&nbsp;
+<br />&nbsp;&nbsp;if(</span><span style="color: #0000BB">strlen</span><span style="color: #007700">(</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">[</span><span style="color: #DD0000">'pw'</span><span style="color: #007700">])&gt;</span><span style="color: #0000BB">6</span><span style="color: #007700">)&nbsp;exit(</span><span style="color: #DD0000">"No&nbsp;Hack&nbsp;~_~"</span><span style="color: #007700">);&nbsp;
+<br />&nbsp;&nbsp;
+<br />
+<br />&nbsp;&nbsp;</span><span style="color: #0000BB">$query&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"select&nbsp;username&nbsp;from&nbsp;huha_sql&nbsp;where&nbsp;passwd=('</span><span style="color: #0000BB">$_GET</span><span style="color: #007700">[</span><span style="color: #0000BB">pw</span><span style="color: #007700">]</span><span style="color: #DD0000">')&nbsp;and&nbsp;username='Admin'"</span><span style="color: #007700">;&nbsp;
+<br />&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">"&lt;hr&gt;query&nbsp;:&nbsp;&lt;strong&gt;</span><span style="color: #007700">{</span><span style="color: #0000BB">$query</span><span style="color: #007700">}</span><span style="color: #DD0000">&lt;/strong&gt;&lt;hr&gt;&lt;br&gt;"</span><span style="color: #007700">;&nbsp;
+<br />&nbsp;&nbsp;</span><span style="color: #0000BB">$result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">mysqli_fetch_array</span><span style="color: #007700">(</span><span style="color: #0000BB">mysqli_query</span><span style="color: #007700">(</span><span style="color: #0000BB">$db</span><span style="color: #007700">,</span><span style="color: #0000BB">$query</span><span style="color: #007700">));&nbsp;
+<br />&nbsp;&nbsp;if(</span><span style="color: #0000BB">$result</span><span style="color: #007700">[</span><span style="color: #DD0000">'username'</span><span style="color: #007700">])&nbsp;echo&nbsp;</span><span style="color: #0000BB">$flag</span><span style="color: #007700">;&nbsp;
+<br />&nbsp;&nbsp;else{
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">highlight_file</span><span style="color: #007700">(</span><span style="color: #0000BB">__FILE__</span><span style="color: #007700">);
+<br />&nbsp;&nbsp;}
+<br /></span><span style="color: #0000BB">?&gt;
+<br /></span>
+</span>
+</code>
