@@ -1,4 +1,4 @@
-module.exports = function(e,msg,tag,owner) {return;
-    if(msg.sender.user_id == owner && msg.message.search(/86/) >= 0)
+module.exports = function(e,msg,tag,owner) {
+    if(msg.sender.user_id == owner && msg.message == '86')
         return ['86'];
 }

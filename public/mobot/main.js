@@ -8,6 +8,9 @@ const options = mri(process.argv.slice(2), {
 })
 const plugins = [{
     'evt':'message',
+    'handler':require('./plugins/save.js')
+},{
+    'evt':'message',
     'handler':require('./plugins/arcaea.js')
 },{
     'evt':'message',
@@ -83,6 +86,10 @@ if (options.help) {
       bot.on(plugin.evt, function(e,m,t){
           return plugin.handler(e,m,t,bot,options.owner);
       });
+  })
+
+  bot.on('message.group.@.me', function(){
+    return '?';
   })
 
   bot.connect()

@@ -14,12 +14,12 @@
   function init(){
     css(".lazer-click{width: 120px;height: 120px;position: fixed;pointer-events: none;}\
          .lazer-click::before{content:'';top:-40px;left:-40px;width:140px;height:140px;position:absolute;}\
-         .lazer-click1::before{background: url(https://muzhou.tech/public/lazer_click/button1.svg);background-size:contain;}\
-         .lazer-click2::before{background: url(https://muzhou.tech/public/lazer_click/button2.svg);background-size:contain;}\
-         .lazer-click3::before{background: url(https://muzhou.tech/public/lazer_click/button3.svg);background-size:contain;}\
-         .lazer-click4::before{background: url(https://muzhou.tech/public/lazer_click/button4.svg);background-size:contain;}\
-         .lazer-click5::before{background: url(https://muzhou.tech/public/lazer_click/button5.svg);background-size:contain;}\
-         .lazer-click6::before{background: url(https://muzhou.tech/public/lazer_click/button6.svg);background-size:contain;}\
+         .lazer-click1::before{background: url(https://muzhou233.github.io/public/lazer_click/button1.svg);background-size:contain;}\
+         .lazer-click2::before{background: url(https://muzhou233.github.io/public/lazer_click/button2.svg);background-size:contain;}\
+         .lazer-click3::before{background: url(https://muzhou233.github.io/public/lazer_click/button3.svg);background-size:contain;}\
+         .lazer-click4::before{background: url(https://muzhou233.github.io/public/lazer_click/button4.svg);background-size:contain;}\
+         .lazer-click5::before{background: url(https://muzhou233.github.io/public/lazer_click/button5.svg);background-size:contain;}\
+         .lazer-click6::before{background: url(https://muzhou233.github.io/public/lazer_click/button6.svg);background-size:contain;}\
          ");
     img();
     attachEvent();
@@ -27,12 +27,12 @@
   }
   function img() {
     var imgsrc = [
-      "https://muzhou.tech/public/lazer_click/button1.svg",
-      "https://muzhou.tech/public/lazer_click/button2.svg",
-      "https://muzhou.tech/public/lazer_click/button3.svg",
-      "https://muzhou.tech/public/lazer_click/button4.svg",
-      "https://muzhou.tech/public/lazer_click/button5.svg",
-      "https://muzhou.tech/public/lazer_click/button6.svg",
+      "https://muzhou233.github.io/public/lazer_click/button1.svg",
+      "https://muzhou233.github.io/public/lazer_click/button2.svg",
+      "https://muzhou233.github.io/public/lazer_click/button3.svg",
+      "https://muzhou233.github.io/public/lazer_click/button4.svg",
+      "https://muzhou233.github.io/public/lazer_click/button5.svg",
+      "https://muzhou233.github.io/public/lazer_click/button6.svg",
     ];
     for(var i = 0; i < imgsrc.length; i++){
       var Img = new Image();

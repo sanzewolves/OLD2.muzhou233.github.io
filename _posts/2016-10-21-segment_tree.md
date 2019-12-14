@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 浅谈线段树(转载)
+title: 浅谈线段树
 date: 2016-10-21
 categories: blog
 tags: [OI,转载]

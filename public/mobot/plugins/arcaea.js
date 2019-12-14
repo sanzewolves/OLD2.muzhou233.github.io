@@ -179,16 +179,4 @@ v0.1.0   ！暂不支持查询成绩\n\
       ret += '入坑时间：' + date.getFullYear() + '年' + date.getMonth() + '月' + date.getDate() + '日';
       return ret;
     }
-    function recall(retmsg){
-        if(msg.message_type == 'private')
-            bot('send_private_msg',{
-                user_id: msg.sender.user_id,
-                message: retmsg
-            })
-        else if(msg.message_type == 'group')
-            bot('send_group_msg',{
-                group_id: msg.group_id,
-                message: '[CQ:at,qq='+msg.sender.user_id+']\n'+retmsg
-            })
-    }
 }

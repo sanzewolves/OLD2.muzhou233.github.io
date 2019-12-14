@@ -1,6 +1,13 @@
 # Achievements
 achievements: [
     {
+        name: "我永远都会守护在你的身边",
+        detail: "",
+        time: "5.2",
+        img: "/img/ach/ach_8.jpg",
+        url: "/video/ach8",
+        urlName: "观看视频"
+    },{
         name: "这本轻小说真厉害",
         detail: "终于买了一本正版轻小说",
         time: "2019.6.20",

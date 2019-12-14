@@ -3,43 +3,9 @@ layout: page
 description: "I am a Student.  I will always be a Student."
 ---
 
-<style>
-.main-content{
-    position: relative;
-    top: -70px;
-}
-.top-post{
-    height: 180px;
-    background-color: white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22), 0 7px 28px rgba(0, 0, 0, 0.25);
-}
-#top-post-title{
-    margin-left: 50px;
-}
-#top-post-content{
-    text-align: center;
-    font-size: 200%;
-}
-</style>
-
-<!-- toppost -->
-<div id="post-list" class="top-post">
-<div id="post-list-in" class="post-preview">
-    <a href="/about/">
-        <h2 id="top-post-title" class="post-title">
-            [TOP]博主有话说
-        </h2>
-        <div id="top-post-content" class="post-content-preview">
-            欢迎围观
-        </div>
-    </a>
-</div>
-</div>
-<hr>
-
 {% for post in paginator.posts %}{% if post.hide %}{% else %}
-<div id="post-list">
-<div id="post-list-in" class="post-preview">
+<div class="post-list">
+<div class="post-list-in post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
             {% if post.copyright %}「转载」{% endif %}

@@ -21,14 +21,14 @@ module.exports = function(e,msg,tag,bot) {
         if(repeatCount[msg.group_id] < 3 || repeated[msg.group_id] == true)return;
         repeated[msg.group_id] = true;
         var random = Math.random();
-        if(random < 0.1)return ['打断'];
-        if(random < 0.6)return msg.message;
+        if(random < 0.05 * repeatCount[msg.group_id])return ['打断'];
+        if(random < 0.2 * repeatCount[msg.group_id])return msg.message;
     }else{
         lastMessage[msg.group_id] = msg.message;
         repeatCount[msg.group_id] = 1;
         repeated[msg.group_id] = false;
     }
-    if(Math.random() < 0.02)//repeat by random
+    if(Math.random() < 0.005)//repeat by random
         return msg.message;
     function recall(retmsg){
         if(msg.message_type == 'private')

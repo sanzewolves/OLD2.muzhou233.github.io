@@ -56,7 +56,7 @@ kramdown:
 
 highlighter: rouge
 permalink: pretty
-paginate: 12
+paginate: 16
 
 # Exclude from processing.
 # The following items will not be processed, by default.
