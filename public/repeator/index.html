@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+        <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"/>
+        <meta name=renderer content=webkit>
+        <meta http-equiv=Cache-Control content=no-siteapp />
+        <script src="/js/jquery.min.js "></script>
+        <link rel="stylesheet" href="/css/clean-blog.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <div class="inner">
+                    <h2 class="title"></h2>
+                    <div class="content"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function Get(name) {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        }
+        console.log(Get('content'));
+        $('.title').html(decodeURI(escape(Get('title'))));
+        $('.content').html(decodeURI(escape(Get('content'))));
+        $('body').addClass(decodeURI(escape(Get('template'))))
+
+    </script>
+    <style>
+    body.gtb{
+        position: relative;
+    }
+    body.gtb .container{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+    body.gtb .main{
+        margin-top: 200px;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: 100%;
+        transform: translateX(-50%) translateY(-50%);
+        box-shadow: 1px 5px 18px 5px rgba(64, 158, 225, 0.5);
+        background-image: linear-gradient(-90deg, #409EFF 0%, #276ace 100%);
+    }
+    body.gtb .main div{
+        text-align: center;
+        color: white;
+    }
+    body.gtb .inner{
+        position: relative;
+        padding-top:50px;
+        width: 100%;
+    }
+    </style>
+</html>
