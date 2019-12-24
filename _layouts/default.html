@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-{% include head.html %}
+    {% include head.html %}
 
-<body data-spy="scroll" data-offset="300">
-	<div id="loading">
-		<div id="loading-center">
-			<div id="loading-center-absolute">
-				<div id="object"></div>
-			</div>
-		</div>
-	</div>
-	
-    {% include nav.html %}
+    <body data-spy="scroll" data-offset="300">
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div id="object"></div>
+                </div>
+            </div>
+        </div>
 
-    {{ content }}
+        {% include nav.html %} {{ content }} {% include footer.html %}
+    </body>
 
-    {% include footer.html %}
-</body>
-
-<script>
-setTimeout(function () {
-	$("#loading").fadeOut("slow");
-	}, 500
-);
-</script>
+    <script>
+        setTimeout(function() {
+            $('#loading').fadeOut('slow')
+        }, 500)
+    </script>
 </html>

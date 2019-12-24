@@ -1,0 +1,8 @@
+public/
+archive.html
+public.html
+node_modules/
+_site
+.vscode
+.jekyll-metadata
+.jekyll-cache

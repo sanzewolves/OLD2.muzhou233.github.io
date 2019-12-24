@@ -26,6 +26,10 @@ show: true
 
 **[置顶]下次更新将修复IE浏览器的BUG**  
 
+### 2019-12-25更新
+
+增加 prettier + lint-md 代码格式化工具 <a href="https://travis-ci.com/MuZhou233/muzhou233.github.io">![](https://travis-ci.com/MuZhou233/muzhou233.github.io.svg?branch=master)</a>
+
 ### 2019-12-14更新
 
 将 Gitment 更换为 Gitalk  

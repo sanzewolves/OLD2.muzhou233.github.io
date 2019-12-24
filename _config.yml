@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -20,24 +20,28 @@
 
 title: MuZhou Blog
 email: muzhou233@outlook.com
-header-img: "img/green.jpg"
+header-img: 'img/green.jpg'
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-keyword: "MuZhou, MuZhou Blog, OIer, noip"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mosarin.tech" # the base hostname & protocol for your site, e.g. http://example.com
+    Write an awesome description for your new site here. You can edit this
+    line in _config.yml. It will appear in your document head meta (for
+    Google search results) and in your feed.xml site description.
+keyword: 'MuZhou, MuZhou Blog, OIer, noip'
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://mosarin.tech' # the base hostname & protocol for your site, e.g. http://example.com
 
 # About/contact
 owner:
-  name: "MuZhou"
-  email: MuZhou233@outlook.com
-  bio: ""
+    name: 'MuZhou'
+    email: MuZhou233@outlook.com
+    bio: ''
 
 # Data
 gavatar:
 favicon: favicon.ico
+
+qrcode:
+    imagePath: /img/mz.jpg
+    background: #208c5b
 
 douban_username:
 twitter_username:
@@ -46,13 +50,19 @@ facebook_username:
 weibo_username:
 zhihu_username: muzhou233
 
+gitalk:
+    clientID: 497be462d2fb3ee352ff
+    clientSecret: c0013ee9f11e194af8959d8f2a0984234683d849
+    repo: muzhou233.github.io
+    owner: MuZhou233
+
 # Build settings
 # use Github Flavored Markdown !important
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+    input: GFM # use Github Flavored Markdown !important
 
 highlighter: rouge
 permalink: pretty
@@ -67,32 +77,32 @@ paginate: 16
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+    - .jekyll-cache/
+    - gemfiles/
+    - Gemfile
+    - Gemfile.lock
+    - README.md
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: Asia/Shanghai
 
 # Defaults for posts
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      author: "MuZhou"
-      header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
-  - scope:
-      path: "public"
-    values:
-        public: true
+    - scope:
+          path: ''
+          type: 'posts'
+      values:
+          layout: 'post'
+          author: 'MuZhou'
+          header-img: 'img/green.jpg' # We don't want posts without a header image, that whould mean white on white
+    - scope:
+          path: 'public'
+      values:
+          public: true
 
 # Gems
 plugins: [jekyll-paginate]
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 3              # A tag will be featured if the size of it is more than this condition value
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 3 # A tag will be featured if the size of it is more than this condition value
