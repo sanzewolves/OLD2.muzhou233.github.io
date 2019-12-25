@@ -2,40 +2,49 @@
 <footer>
     <div class="container">
         <div class="row">
-        	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
-        		<!-- Featured Tags -->
+            <div
+                class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+            >
+                <!-- Featured Tags -->
                 {% if site.featured-tags %}{% if page.url != '/tags/' %}
                 <section>
                     <p><a href="/tags/">FEATURED TAGS</a></p>
                     <div class="tags">
-        				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-        				{% endfor %}
-        			</div>
+                        {% for tag in site.tags %} {% if tag[1].size >
+                        {{site.featured-condition-size}} %}
+                        <a
+                            href="{{ site.baseurl }}/archive/?tag={{ tag[0] }}"
+                            title="{{ tag[0] }}"
+                            rel="{{ tag[1].size }}"
+                        >
+                            {{ tag[0] }}
+                        </a>
+                        {% endif %} {% endfor %}
+                    </div>
                 </section>
                 {% endif %}{% endif %}
 
-				<!-- Friends Blog -->
+                <!-- Friends Blog -->
                 {% if site.data.friends.friends %}
-                <hr class="hidden-sm hidden-xs">
+                <hr class="hidden-sm hidden-xs" />
                 <p>FRIENDS</p>
                 <ul class="list-inline">
                     {% for friend in site.data.friends.friends %}
-     	     	         <li><a target="_blank" href="{{friend.href}}">{{friend.title}}</a></li>
-          		      {% endfor %}
-            	</ul>
-            	{% endif %}
+                    <li>
+                        <a target="_blank" href="{{ friend.href }}"
+                            >{{ friend.title }}</a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
 
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
                     <!-- kill the Facebook and Weibo -->
                     <li>
-                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                        <a href="{{ site.baseurl }}/feed.xml">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -44,21 +53,28 @@
                     </li>
                     {% if site.twitter_username %}
                     <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
+                        <a
+                            href="https://twitter.com/{{ site.twitter_username }}"
+                        >
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                <i
+                                    class="fa fa-twitter fa-stack-1x fa-inverse"
+                                ></i>
                             </span>
                         </a>
                     </li>
-                    {% endif %}
-
-                    {% if site.github_username %}
+                    {% endif %} {% if site.github_username %}
                     <li>
-                        <a target="_blank" href="https://github.com/{{ site.github_username }}">
+                        <a
+                            target="_blank"
+                            href="https://github.com/{{ site.github_username }}"
+                        >
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                <i
+                                    class="fa fa-github fa-stack-1x fa-inverse"
+                                ></i>
                             </span>
                         </a>
                     </li>
@@ -92,7 +108,10 @@
 
                     {% if site.zhihu_username %}
                     <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                        <a
+                            target="_blank"
+                            href="https://www.zhihu.com/people/{{ site.zhihu_username }}"
+                        >
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa  fa-stack-1x fa-inverse">知</i>
@@ -112,10 +131,10 @@
                     </li>
                     {% endif %}
                     -->
-
                 </ul>
                 <p class="copyright text-muted">
-                &copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. ❖ Powered by Jekyll. ❖ Forked from CnFeat and Hux.
+                    &copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}. ❖
+                    Powered by Jekyll. ❖ Forked from CnFeat and Hux.
                 </p>
                 <div style="text-align:center">
                     <div id="google_translate_element"></div>
@@ -125,43 +144,62 @@
     </div>
 </footer>
 
-<div id="outerdiv" style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+<div
+    id="outerdiv"
+    style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;"
+>
     <div id="innerdiv" style="position:absolute;">
         <img id="bigimg" style="border:5px solid #fff;" src="" />
     </div>
 </div>
 
 <!-- toc -->
-<script src="{{ "/js/jekyll-table-of-contents.js " | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/js/jekyll-table-of-contents.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-    $('#toc').toc();
-}); </script>
+    $(document).ready(function() {
+        $('#toc').toc()
+    })
+</script>
 
 <!-- smooth-scroll -->
-<script src="{{ "/js/smooth-scroll.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/js/smooth-scroll.min.js"></script>
 <script type="text/javascript">
-    var scroll = new SmoothScroll('a[href*="#"]',{
+    var scroll = new SmoothScroll('a[href*="#"]', {
         offset: 200,
         speed: 100,
-        autoCoefficent: 10
-    });
+        autoCoefficent: 10,
+    })
 </script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/muzhou-blog.js " | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/js/clean-blog.min.js"></script>
+<script src="{{ site.baseurl }}/js/muzhou-blog.js"></script>
 
 <!-- google translate -->
 <script type="text/javascript">
-function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'zh-CN', layout: 		google.translate.TranslateElement.InlineLayout.SIMPLE, multilanguagePage: true}, 'google_translate_element');
-}
-function googleTranslateElementInit() {
-	new google.translate.TranslateElement({pageLanguage: 'zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true}, 'google_translate_element');
-}
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                multilanguagePage: true,
+            },
+            'google_translate_element'
+        )
+    }
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'zh-CN',
+                layout:
+                    google.translate.TranslateElement.FloatPosition.TOP_LEFT,
+                multilanguagePage: true,
+            },
+            'google_translate_element'
+        )
+    }
 </script>
-<script src="{{ "/js/google-translate.js " | prepend: site.baseurl }}"></script>
+<script src="{{ site.baseurl }}/js/google-translate.js"></script>

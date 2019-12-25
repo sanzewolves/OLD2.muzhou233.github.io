@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -39,6 +39,10 @@ owner:
 gavatar:
 favicon: 
 
+qrcode:
+    imagePath: 
+    background: 
+
 douban_username:
 twitter_username:
 github_username: 
@@ -46,17 +50,23 @@ facebook_username:
 weibo_username:
 zhihu_username: 
 
+gitalk:
+    clientID: 
+    clientSecret: 
+    repo: 
+    owner: 
+
 # Build settings
 # use Github Flavored Markdown !important
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+    input: GFM # use Github Flavored Markdown !important
 
 highlighter: rouge
 permalink: pretty
-paginate: 12
+paginate: 16
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -67,11 +77,11 @@ paginate: 12
 # their entries' file path in the `include:` list.
 #
 exclude:
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - README.md
+    - .jekyll-cache/
+    - gemfiles/
+    - Gemfile
+    - Gemfile.lock
+    - README.md
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: Asia/Shanghai
@@ -90,5 +100,5 @@ defaults:
 plugins: [jekyll-paginate]
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 3              # A tag will be featured if the size of it is more than this condition value
+featured-tags: true # whether or not using Feature-Tags
+featured-condition-size: 3 # A tag will be featured if the size of it is more than this condition value

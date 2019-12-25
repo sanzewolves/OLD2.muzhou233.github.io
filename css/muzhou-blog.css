@@ -18,24 +18,19 @@ progress {
   left: 0;
   top: 0;
   z-index: 5;
-
   /* Dimensions */
   width: 100%;
   height: .25em;
-
   /* Reset the apperance */  
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-
   /* Get rid of the default border in Firefox/Opera. */
   border: none;
-
   /* For Firefox/IE10+ */
   background-color: transparent;
-
   /* For IE10+, color of the progress bar */
-  color: red;
+  color: blue;
 }
 progress::-webkit-progress-bar {
   background-color: transparent;
@@ -51,7 +46,7 @@ progress::-webkit-progress-bar {
 }
 
 .progress-bar {
-  background-color: red;
+  color: blue;
   width: 50%;
   display: block;
   height: inherit;
@@ -64,6 +59,8 @@ progress::-webkit-progress-bar {
   position: relative;
   top: -100px;
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.5), 0 8px 28px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  overflow: hidden;
 }
 .videoBiliBili, .video-js{
   z-index: 3;
@@ -150,6 +147,10 @@ table > tbody > tr > td{
 .post-content li{
   margin-left:20px;
 }
+.post-content img{
+  border-radius: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22), 0 7px 28px rgba(0, 0, 0, 0.25);
+}
 
 .achievement-list{
   position:relative;
@@ -170,11 +171,12 @@ table > tbody > tr > td{
   overflow:auto;
 	padding-left: 0px;
 	padding-right: 0px;
-  margin-top: 20px;
-	margin-bottom: 30px;
-  margin-left:20px;
-  margin-right:20px;
+  margin-top: 10px;
+	margin-bottom: 45px;
+  margin-left:15px;
+  margin-right:15px;
   background: white;
+  border-radius: 16px;
 }
 .achievement-name{
 	font-size: 20px;
@@ -214,7 +216,7 @@ table > tbody > tr > td{
 body{
 	position: relative;
 }
-#post-list:hover{
+.post-list:hover{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22), 0 7px 28px rgba(0, 0, 0, 0.25);
   background: white;
 }
@@ -222,7 +224,7 @@ img,
 pre{
 	transition: all 0.5s ease 0s;
 }
-#post-list{
+.post-list{
 	transition: all 0.5s ease 0s;
 }
 pre:hover{/* code line */
@@ -254,7 +256,7 @@ pre:hover{/* code line */
     top: 10%;
 }
 
-#post-list-in{
+.post-list-in{
   padding: 3px;
 	margin: 20px;
 }
@@ -568,6 +570,9 @@ pre code {
   width: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+.post-list{
+  border-radius: 16px;
 }
 .postlist-container {
   margin-bottom: 15px;
@@ -1153,7 +1158,8 @@ form .row:first-child .floating-label-form-group {
   padding: 10px;
   background-color: white;
   border-radius: 0;
-	transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  border-radius: 16px;
 }
 @media only screen and (min-width: 768px) {
   .pager li > a,
