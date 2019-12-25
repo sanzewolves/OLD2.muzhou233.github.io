@@ -38,6 +38,7 @@ owner:
 # Data
 gavatar:
 favicon: favicon.ico
+musicID: 460839654
 
 qrcode:
     imagePath: /img/mz.jpg
