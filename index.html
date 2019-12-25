@@ -8,7 +8,9 @@ description: 'I am a Student.  I will always be a Student.'
     <div class="post-list-in post-preview">
         <a href="{{ post.url | prepend: site.baseurl }}">
             <h2 class="post-title">
-                {% if post.copyright %}「转载」{% endif %} {{ post.title }}
+                {% if post.copyright %}「转载」{% endif %}
+                {% if post.exterUrl %}「外链」{% endif %}
+                {{ post.title }}
             </h2>
             {% if post.subtitle %}
             <h3 class="post-subtitle">

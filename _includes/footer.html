@@ -6,9 +6,9 @@
                 class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
             >
                 <!-- Featured Tags -->
-                {% if site.featured-tags %}{% if page.url != '/tags/' %}
+                {% if site.featured-tags %}{% if page.url != '/archive/' %}
                 <section>
-                    <p><a href="/tags/">FEATURED TAGS</a></p>
+                    <p><a href="/archive/">FEATURED TAGS</a></p>
                     <div class="tags">
                         {% for tag in site.tags %} {% if tag[1].size >
                         {{site.featured-condition-size}} %}

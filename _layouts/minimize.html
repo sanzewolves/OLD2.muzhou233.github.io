@@ -2,6 +2,13 @@
 <html lang="en">
     {% include head.html %}
 
+    {% if page.exterUrl %}
+    <script>
+    window.open('{{ page.exterUrl }}', '_blank').location;
+    window.history.go(-1)
+    </script>
+    {% endif %}
+
     <body data-spy="scroll" data-offset="300">
         <div id="loading">
             <div id="loading-center">
@@ -31,9 +38,6 @@
                             {% if page.subtitle %}
                             <h2 class="subheading">{{ page.subtitle }}</h2>
                             {% endif %}
-                            <span class="meta"
-                                >本文已设置为以简化视图模式展示</span
-                            >
                         </div>
                     </div>
                     <div id="qrcode-block" class="hidden-xs hidden-sm">

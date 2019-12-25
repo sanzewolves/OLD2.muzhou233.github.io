@@ -5,7 +5,7 @@
         "prettier": "^1.19.1"
     },
     "scripts": {
-        "start": "lint-md ./*/*.md & prettier ./*/*.*ml",
+        "start": "lint-md ./*/*.md & prettier --check ./*/*.*ml",
         "fix": "lint-md --fix ./*/*.md & prettier --write ./*/*.*ml"
     }
 }

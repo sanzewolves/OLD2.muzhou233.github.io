@@ -77,6 +77,8 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				<div class="post-preview item" data-tags="{{ _tags }}">
 				    <a href="{{ _article.url | prepend: site.baseurl }}">
 				        <h2 class="post-title">
+							{% if _article.copyright %}「转载」{% endif %}
+							{% if _article.exterUrl %}「外链」{% endif %}
                             {{ _article.title }}
 				        </h2>
 				        {% if _article.subtitle %}

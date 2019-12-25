@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 再谈预流推进-更快的前置重贴标签算法
+title: 再谈预流推进 - 更快的前置重贴标签算法
 date: 2016-10-24
 categories: blog
 tags: [OI]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ubuntu 使用记录-常用应用
+title: Ubuntu 使用记录 - 常用应用
 date: 2016-10-15
 categories: blog
 tags: [LINUX]
