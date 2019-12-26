@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name         mostyle-gray
+@namespace    github.com/muzhou233/mostyle
+@version      1.0.0
+@license      WTFPL
+@preprocessor default
+@var color link-color "Link Color" red
+==/UserStyle== */
+
+html { 
+    -webkit-filter: grayscale(100%); 
+    -moz-filter: grayscale(100%); 
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%); 
+    _filter:none; 
+} 

@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name         mostyle-bilibili
+@namespace    github.com/muzhou233/mostyle
+@version      1.0.0
+@license      WTFPL
+@preprocessor default
+@var color link-color "Link Color" red
+==/UserStyle== */
+
+@-moz-document domain("bilibili.com") {
+  #slide_ad,
+  .gg-floor-module,
+  #live_recommand_report,
+  #bili_live,
+  #bili_dance,
+  #bili_fashion,
+  #bili_ent,
+  #bili_report_spe_rec,
+  .partner.b-footer-wrap,
+  a[href='//app.bilibili.com']{
+    display:none !important;
+  }
+}

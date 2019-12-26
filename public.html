@@ -8,7 +8,7 @@ show: true
 
 <div class="readme"></div>
 
-</hr>
+<hr/>
 
 <div class="readmes"></div>
 
@@ -17,7 +17,7 @@ show: true
 {% assign files = site.static_files | where: "public", true %}
 <script>
 var readmes = "\
-# 共享库列表\n"
+## 共享库列表\n"
 {% for file in files %}{% if file.name == "README.md" %}
 + "- [" + "\
 {{ file.path }}\
@@ -35,11 +35,32 @@ $('.readmes a').each(function(i, e){
         success: function(data){
             var newname = data.slice(2, data.indexOf('\n'));
             if(newname.length > 0)
-                e.innerHTML = marked(newname);
+                e.innerHTML = marked('<div><div>'+newname+'</div></div>');
         }
     })
 });
 </script>
+
+<style>
+br{
+    height: 2px;
+}
+.readmes > ul{
+    margin: 20px;
+}
+.readmes a > div{
+    padding: 15px 20px;
+    transition: all 0.3s ease 0s;
+    border-radius: 10px;
+}
+.readmes > ul a{
+    text-decoration: unset;
+    color: unset;
+}
+.readmes a > div:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22), 0 7px 28px rgba(0, 0, 0, 0.25);
+}
+</style>
 
 <script>
 function loadREADME(name){
