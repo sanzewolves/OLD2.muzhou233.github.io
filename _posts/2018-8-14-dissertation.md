@@ -53,7 +53,7 @@ tags: [dissertation]
 目前流行的前端框架有很多，各有特色，所属的功能层不同，其中：
 Less，Sass 用于 css 样式的预处理，Bootstrap、Foundation、Angular、jQuery-UI、React 等，包含 js、css 库，用于用户界面的构建。  
 
-![](/img/18_8_14_1.png)
+![](/img/18_8_14_1.jpg)
 
 #### 后端
 
@@ -61,7 +61,7 @@ Less，Sass 用于 css 样式的预处理，Bootstrap、Foundation、Angular、j
 流行的数据库 MySQL，Oracle，DB2，SQL Server，Access，Informix，PostgreSQL 等；流行的 Web 服务器主要有 Apache，IIS，Nginx 等；流行的脚本语言有 ASP.NET，PHP，Ruby，Perl，Python 等。  
 另外，近年 Node.js 逐渐变得热门，Node.js 是一个运行环境，使用 JavaScript 作为脚本语言。  
 
-![](/img/18_8_14_2.png)
+![](/img/18_8_14_2.jpg)
 
 ## 设计理念
 
@@ -91,7 +91,7 @@ Less，Sass 用于 css 样式的预处理，Bootstrap、Foundation、Angular、j
 
 #### 技术的选择与使用
 
-![](/img/18_8_14_3.png)
+![](/img/18_8_14_3.jpg)
 
 开发网站的第一步就是拥有一个服务器，我们租赁了 VPS 作为 Theta 的页面及数据服务器，并使用了我们现有的域名进行地址解析。  
 我们二人都维护着自己的博客，所以我们参考了博客的开发过程，以博客的代码作为基础进行前端开发。  

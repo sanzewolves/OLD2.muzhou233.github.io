@@ -6,6 +6,10 @@
      所以无论设置多少层div都对性能没有影响*/
 }
 
+header{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22), 0 7px 28px rgba(0, 0, 0, 0.25)
+}
+
 .tagDetails{
   position: absolute;
   width: 100%;
