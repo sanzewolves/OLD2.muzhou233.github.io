@@ -26,6 +26,10 @@ show: true
 
 ## 2019
 
+### 2019-12-30更新
+
+增加视差滚动效果
+
 ### 2019-12-25更新
 
 增加 prettier + lint-md 代码格式化工具 <a href="https://travis-ci.com/MuZhou233/muzhou233.github.io">![](https://travis-ci.com/MuZhou233/muzhou233.github.io.svg?branch=master)</a>

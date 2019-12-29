@@ -45,6 +45,13 @@ $('.readmes a').each(function(i, e){
 br{
     height: 2px;
 }
+.readme,
+.readmes{
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #fff;
+}
 .readmes > ul{
     margin: 20px;
 }
@@ -76,4 +83,5 @@ function loadREADME(name){
 }
 if(window.location.search != undefined && window.location.search != "")
     loadREADME(window.location.search.slice(1));
+else $('.readme').css('display','none')
 </script>

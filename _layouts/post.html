@@ -17,7 +17,7 @@ layout: default
         <div class="row">
             <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <div class="tags">
+                    <div class="tags rellax" data-rellax-speed="-5">
                         {% for tag in page.tags %}
                         <a
                             class="tag"
@@ -27,11 +27,11 @@ layout: default
                         >
                         {% endfor %}
                     </div>
-                    <h1>{{ page.title }}</h1>
+                    <h1 class="rellax" data-rellax-speed="-4">{{ page.title }}</h1>
                     {% if page.subtitle %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    <h2 class="subheading rellax" data-rellax-speed="-4">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta"
+                    <span class="meta rellax" data-rellax-speed="-3"
                         >Posted by {% if page.author %}{{ page.author }}{% else
                         %}{{ site.title }}{% endif %} on {{ page.date | date:
                         "%B %-d, %Y" }}</span
@@ -39,8 +39,8 @@ layout: default
                 </div>
             </div>
             <div id="qrcode-block" class="hidden-xs hidden-sm">
-                <div id="qrcode"></div>
-                <p style="text-align:right;color:white">手机阅读</p>
+                <div id="qrcode" class="rellax" data-rellax-speed="-3"></div>
+                <p style="text-align:right;color:white" class="rellax" data-rellax-speed="-4">手机阅读</p>
             </div>
         </div>
     </div>
