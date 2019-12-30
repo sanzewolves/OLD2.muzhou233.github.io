@@ -966,6 +966,21 @@ pre code {
     font-size: 20px;
   }
 }
+.post-preview{
+  padding-top: 20px;
+}
+.post-preview > .tags{
+  display: none;
+}
+.post-preview > .tags > a{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #ddd;
+}
+.post-preview > .tags > a:hover{
+  color: #000;
+  border-color: #000;
+  background-color: rgba(255,255,255,0.4)
+}
 .post-preview > a {
   color: #404040;
 }
@@ -977,7 +992,7 @@ pre code {
 .post-preview > a > .post-title {
   font-size: 21px;
   line-height: 1.3;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 8px;
 }
 .post-title {
@@ -997,6 +1012,7 @@ pre code {
   font-size: 16px;
   font-style: italic;
   margin-top: 0;
+  margin-bottom: 20px;
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
@@ -1008,6 +1024,9 @@ pre code {
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
+  .post-preview > .tags{
+    display: unset;
+  }
   .post-preview > a > .post-title {
     font-size: 26px;
     line-height: 1.3;

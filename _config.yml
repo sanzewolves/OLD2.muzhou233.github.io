@@ -28,6 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 keyword: 'MuZhou, MuZhou Blog, OIer, noip'
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://mosarin.tech' # the base hostname & protocol for your site, e.g. http://example.com
+tags-preview: true
 
 # About/contact
 owner:

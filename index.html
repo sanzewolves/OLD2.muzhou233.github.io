@@ -10,6 +10,18 @@ style="background: radial-gradient(closest-corner circle at 80% 50%,rgba(255,255
 {% endif %}
 >
     <div class="post-list-in post-preview">
+        {% if site.tags-preview %}
+        <div class="tags">
+            {% for tag in post.tags %}
+            <a
+                class="tag"
+                href="{{ site.baseurl }}/archive/?tag={{ tag }}"
+                title="{{ tag }}"
+                >{{ tag }}</a
+            >
+            {% endfor %}
+        </div>
+        {% endif %}
         <a href="{{ post.url | prepend: site.baseurl }}">
             <h2 class="post-title">
                 {% if post.copyright %}「转载」{% endif %}
