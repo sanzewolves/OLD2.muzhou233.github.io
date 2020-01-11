@@ -6,7 +6,7 @@ description: 'I am a Student.  I will always be a Student.'
 {% for post in paginator.posts %}{% if post.hide %}{% else %}
 <div class="post-list"
 {% if post.header-img != 'img/green.jpg' %}
-style="background: radial-gradient(closest-corner circle at 80% 50%,rgba(255,255,255,0),rgba(255,255,255,1)),url({{ post.header-img }}) no-repeat center;background-size: cover;"
+style="background: radial-gradient(closest-corner circle at 80% 50%,rgba(255,255,255,0),rgba(255,255,255,1)),url({{ site.baseurl }}/{{ post.header-img }}) no-repeat center;background-size: cover;"
 {% endif %}
 >
     <div class="post-list-in post-preview">
