@@ -52,6 +52,14 @@ layout: default
             <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
             <script src="https://unpkg.com/@videojs/http-streaming/dist/"></script>
             <script>
+                function getQueryString(name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r != null) return unescape(r[2]);
+                    return null;
+                }
+                if(getQueryString('videourl') != null)
+                    $('#vid1 source').attr('src', getQueryString('videourl'))
                 var player = videojs('vid1')
                 player.play()
             </script>
