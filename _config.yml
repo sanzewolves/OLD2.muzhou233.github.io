@@ -18,28 +18,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: MuZhou Blog
-email: muzhou233@outlook.com
+title: Sanze Blog
+email: 1502580471@qq.com
 header-img: 'img/headfigure/index.jpg'
 description: >- # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
-keyword: 'MuZhou, MuZhou Blog, OIer, noip'
+    我害怕孤独曾妄想从他手中逃离，或许我是騃童钝夫，但它却让我遇见了不可或缺的你。
+
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://mosarin.tech' # the base hostname & protocol for your site, e.g. http://example.com
 tags-preview: true
 
 # About/contact
 owner:
-    name: 'MuZhou'
-    email: MuZhou233@outlook.com
+    name: 'Sanze'
+    email: 1502580471@qq.com
     bio: ''
 
 # Data
 gavatar:
 favicon: favicon.ico
-musicID: 26201959
+musicID: 489289058 
 
 qrcode:
     imagePath: /img/mz-zero.png
@@ -47,10 +45,10 @@ qrcode:
 
 douban_username:
 twitter_username:
-github_username: muzhou233
+github_username: 
 facebook_username:
 weibo_username:
-zhihu_username: muzhou233
+zhihu_username: #必须英文吗 
 
 gitalk:
     clientID: 497be462d2fb3ee352ff
@@ -86,7 +84,7 @@ exclude:
     - README.md
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: Asia/Shanghai
+timezone: Asia/Hefei
 
 # Defaults for posts
 defaults:
@@ -95,7 +93,7 @@ defaults:
           type: 'posts'
       values:
           layout: 'post'
-          author: 'MuZhou'
+          author: 'Sanze'
           header-img: 'img/green.jpg' # We don't want posts without a header image, that whould mean white on white
     - scope:
           path: 'public'
